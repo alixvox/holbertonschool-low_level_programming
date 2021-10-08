@@ -2,25 +2,10 @@
 #include <stdio.h>
 
 /**
- * rev_string: reverses a string
+ * rev_string - reverses a string
  *
- * Return: 0 (Success)
+ * @s: the string to be reversed
  */
-
-#include <unistd.h>
-
-/**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-
 void rev_string(char *s)
 {
 	int i = 0;
