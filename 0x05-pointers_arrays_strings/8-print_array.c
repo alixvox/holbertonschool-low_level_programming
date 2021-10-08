@@ -2,11 +2,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/*
+/**
  * print_array - prints n items of an array
  *
  * @a: the int array
- * @b: the number of int to print from the array
+ * @n: the number of int to print from the array
  */
 
 void print_array(int *a, int n)
