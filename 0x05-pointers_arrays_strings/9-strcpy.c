@@ -7,6 +7,8 @@
  *
  * @dest: The destination string.
  * @src: The string to be copied to dest.
+ *
+ * Return: the destination string (dest)
  */
 
 char *_strcpy(char *dest, char *src)
