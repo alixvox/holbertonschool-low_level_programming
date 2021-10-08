@@ -1,8 +1,8 @@
 #include "main.h"
 #include <stdio.h>
 
-/*
- * puts_half: print the second half of the string
+/**
+ * puts_half - print the second half of the string
  *
  * @str: the string to be compared.
  */
@@ -19,7 +19,7 @@ void puts_half(char *str)
 	
 	j = i / 2;
 	
-	while (j<=i)
+	while ( j<= i)
 	{
 		_putchar(str[j-1]);
 		j++;
