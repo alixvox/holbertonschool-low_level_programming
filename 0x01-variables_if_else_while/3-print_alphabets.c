@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * main - prints the alphabet in lowercase, followed by a new line
+ * main - prints the alphabet in lowercase and in uppercase, followed by a new line
  *
  * Return: always 0 (Success)
  */
@@ -21,4 +21,5 @@ int main(void)
 		putchar(ch);
 	}
 	printf("\n");
+	return (0);
 }
