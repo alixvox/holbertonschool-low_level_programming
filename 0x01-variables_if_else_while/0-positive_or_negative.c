@@ -2,8 +2,11 @@
 #include <stdlib.h>
 #include <time.h>
 
-/* betty style doc for function main goes there */
-
+/**
+ * main - checks if a random number is positive or negative
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	int n;
