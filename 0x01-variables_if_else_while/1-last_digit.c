@@ -18,5 +18,6 @@ int main(void)
 		printf("0");
 	else
 		printf("less than 6 and not 0");
+	printf("\n");
 	return (0);
 }
