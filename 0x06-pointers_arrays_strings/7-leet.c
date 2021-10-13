@@ -4,7 +4,7 @@
 /**
  * leet - converts text into 1337 format.
  *
- * @*a: the string to be converted
+ * @a: the string to be converted
  *
  * Return: the converted string a
  */
