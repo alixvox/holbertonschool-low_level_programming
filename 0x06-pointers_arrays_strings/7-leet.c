@@ -12,29 +12,28 @@
 char *leet(char *a)
 {
 	int i;
+	int j = 0;
+	char reg[11] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
+	char leet[11] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
+	char *preg = reg;
+	char *pleet = leet;
 
 	for (i = 0; a[i] != '\0'; i++)
 	{
-		if (a[i] == 'a' || a[i] == 'A')
+		while (j < 10)
 		{
-			a[i] = '4';
+			if (a[i] == *preg)
+			{
+				a[i] = *pleet;
+			}
+
+			preg++;
+			pleet++;
+			j++;
 		}
-		else if (a[i] == 'e' || a[i] == 'E')
-		{
-			a[i] = '3';
-		}
-		else if (a[i] == 'o' || a[i] == 'O')
-		{
-			a[i] = '0';
-		}
-		else if (a[i] == 't' || a[i] == 'T')
-		{
-			a[i] = '7';
-		}
-		else if (a[i] == 'l' || a[i] == 'L')
-		{
-			a[i] = '1';
-		}
+		preg = preg - j;
+		pleet = pleet - j;
+		j = 0;
 	}
 	return (a);
 }
