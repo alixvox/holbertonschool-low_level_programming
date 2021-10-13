@@ -4,7 +4,9 @@
 /**
  * cap_string - capitalizes all words
  *
- * @*a: the string to be capitalized
+ * @a: the string to be capitalized
+ *
+ * Return: the capitalized string
  */
 
 char *cap_string(char *a)
@@ -28,7 +30,7 @@ char *cap_string(char *a)
 			case ')':
 			case '{':
 			case '}':
-				if (a[i+1] >= 'a' && a[i+1] <= 'z')
+				if (a[i + 1] >= 'a' && a[i + 1] <= 'z')
 				{
 					i++;
 					a[i] -= 32;

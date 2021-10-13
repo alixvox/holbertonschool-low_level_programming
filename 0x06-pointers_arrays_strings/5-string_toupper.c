@@ -4,7 +4,7 @@
 /**
  * string_toupper - converts all lowercase to uppercase.
  *
- * @*a: the string literal to be checked
+ * @a: the string literal to be checked
  *
  * Return: The string literal with all caps
  */
@@ -21,5 +21,5 @@ char *string_toupper(char *a)
 		}
 	}
 
-	return a;
+	return (a);
 }

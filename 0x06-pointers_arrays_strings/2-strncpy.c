@@ -4,9 +4,11 @@
 /**
  * *_strncpy - copies a string with max n bytes.
  *
- * @*dest: the destination string
- * @*src: the string to be concatenated to dest
+ * @dest: the destination string
+ * @src: the string to be concatenated to dest
  * @n: the total bytes from src to use
+ *
+ * Return: the dest string
  */
 
 char *_strncpy(char *dest, char *src, int n)

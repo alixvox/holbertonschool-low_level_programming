@@ -2,11 +2,13 @@
 #include "holberton.h"
 
 /**
- * *_strncat - concatenates two strings using n bytes
+ * _strncat - concatenates two strings using n bytes
  *
- * @*dest: the destination string
- * @*src: the string concatenated to dest
+ * @dest: the destination string
+ * @src: the string concatenated to dest
  * @n: the max number of bytes to use
+ *
+ * Return: the destination string
  */
 
 char *_strncat(char *dest, char *src, int n)
