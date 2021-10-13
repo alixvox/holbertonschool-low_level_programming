@@ -5,7 +5,7 @@
  * *_strncpy - copies a string with max n bytes.
  *
  * @dest: the destination string
- * @src: the string to be concatenated to dest
+ * @src: the string to be copied to dest
  * @n: the total bytes from src to use
  *
  * Return: the dest string
@@ -13,17 +13,17 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i = 0;
 	int j;
 
-	while (src[i] != '\0')
-	{
-		i++;
-	}
-
-	for (j = 0; j < n; j++)
+	for (j = 0; (j < n && src[j]); j++)
 	{
 		dest[j] = src[j];
 	}
+	while (j < n)
+	{
+		dest[j] = '\0';
+		j++;
+	}
 	return (dest);
+
 }
