@@ -12,7 +12,7 @@
 
 int main(int argc, char *argv[])
 {
-	int chleft = atoi(argv[1]);
+	int chleft;
 	int numcoins = 0;
 
 	if (argc != 2)
@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-
+	chleft = atoi(argv[1]);
 	while (chleft - 25 >= 0)
 	{
 		numcoins++;
