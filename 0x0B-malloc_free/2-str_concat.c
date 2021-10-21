@@ -19,13 +19,17 @@ char *str_concat(char *s1, char *s2)
 	int i;
 	int j;
 
-	while (*s1 != '\0')
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	while (*s1)
 	{
 		size++;
 		s1++;
 	}
 	s1 = s1 - size;
-	while (*s2 != '\0')
+	while (*s2)
 	{
 		size++;
 		size1++;
@@ -39,18 +43,10 @@ char *str_concat(char *s1, char *s2)
 	}
 	for (i = 0; i < (size - size1); i++)
 	{
-		if (s1 == NULL)
-		{
-			break;
-		}
 		s[i] = s1[i];
 	}
 	for (j = 0; j < size1; j++)
 	{
-		if (s2 == NULL)
-		{
-			break;
-		}
 		s[i] = s2[j];
 		i++;
 	}
