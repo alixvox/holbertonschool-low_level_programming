@@ -10,7 +10,7 @@ size_t print_dlistint_backward(const dlistint_t *h)
 {
 	const dlistint_t *currNode = h;
 	size_t c = 1;
-	
+
 	while (currNode->next)
 	{
 		currNode = currNode->next;

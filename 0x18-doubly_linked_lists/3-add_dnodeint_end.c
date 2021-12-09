@@ -7,12 +7,12 @@
  * @n: The int value of the new node
  * Return: The address of the new node
  */
- 
+
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
 	dlistint_t *newNode = malloc(sizeof(dlistint_t));
 	dlistint_t *tempNode = *head;
-	
+
 	if (!newNode)
 	{
 		free(newNode);
