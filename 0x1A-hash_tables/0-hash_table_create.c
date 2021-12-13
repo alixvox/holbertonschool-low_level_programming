@@ -1,5 +1,11 @@
 #include "hash_tables.h"
 
+/**
+ * hash_table_create - Creates an empty hash table.
+ *
+ * @size: The size of the table
+ * Return: A pointer to the new table
+ */
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *table = malloc(sizeof(hash_table_t));
