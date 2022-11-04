@@ -1,61 +1,59 @@
 #include "search_algos.h"
 /**
- * advanced_binary - Find value in array using an
- * advanced version of binary search
- * @array: The array to be searched
- * @size: size_t size of array
- * @value: The value to be found
- * Return: The index of the array at which the value
- * was found, -1 if not found.
+ * advanced_binary - Find value in array using binary search algorithm
+ * @array: The array to be searched.
+ * @size: Size of the array.
+ * @value: The value to find.
+ * Return: The index of the array where value was found, or -1.
  */
 int advanced_binary(int *array, size_t size, int value)
 {
 	if (!array)
 		return (-1);
-	return (adv_bin_recursion(array, 0, size - 1, value));
+
+	return (recursive_advanced(array, 0, size - 1, value));
 }
 
 /**
- * adv_bin_recursion - Recursively searches
- * through array using binary search method.
- * @array: The array to be searched
- * @start: starting index of the search
- * @end: Endign index of the search
- * @value: The value to be found
- * Return: The index of the array at which the value was found, -1 if not.
+ * recursive_advanced - Does the actual work of binary search.
+ * @array: The array to be searched.
+ * @start: The starting index.
+ * @end: The ending index.
+ * @value: The value to find.
+ * Return: The index of the array where value was found, or -1.
  */
-int adv_bin_recursion(int *array, int start, int end, int value)
+int recursive_advanced(int *array, int start, int end, int value)
 {
 	int mid = start + (end - start) / 2;
 
 	if (start == end && array[start] == value)
 		return (start);
 	printf("Searching in array: ");
-	partial_print(array, start, end);
+	print_partial(array, start, end);
 	if (start == end)
 		return (-1);
 	else if (array[mid] == value || array[mid] > value)
-		return (adv_bin_recursion(array, start, mid, value));
+		return (recursive_advanced(array, start, mid, value));
 
-	return (adv_bin_recursion(array, mid + 1, end, value));
+	return (recursive_advanced(array, mid + 1, end, value));
 }
 
 /**
- * partial_print - Prints the segment of the array being searched.
- * @array: The array
- * @start: The starting index
- * @end: The ending index
+ * print_partial - Prints the segment of the array being searched.
+ * @array: The array to be printed.
+ * @index: The current starting index.
+ * @end: The current ending index.
  */
-void partial_print(int *array, int start, int end)
+void print_partial(int *array, int index, int end)
 {
-	for (; start <= end; ++start)
+	for (; index <= end; ++index)
 	{
-		if (start < end)
+		if (index < end)
 		{
-			printf("%d", array[start]);
+			printf("%d", array[index]);
 			printf(", ");
 		}
 		else
-			printf("%d\n", array[start]);
+			printf("%d\n", array[index]);
 	}
 }
